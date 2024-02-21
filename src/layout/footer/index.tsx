@@ -16,7 +16,10 @@ const Footer = () => {
     setScrollVal(position);
   };
   const handlePushTopBtn = () => {
-    window.scrollTo(0, { behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   // Effects
