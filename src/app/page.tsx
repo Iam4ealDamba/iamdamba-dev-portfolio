@@ -1,113 +1,156 @@
+"use client";
+
+// ||||||||||||||||||||||||||||| Dependances ||||||||||||||||||||||||||||||||||||
+
+import { FC } from "react";
+import { motion } from "framer-motion";
+import { FaCircle } from "react-icons/fa";
+import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+import Layout from "../layout";
+import technos_img from "../../public/images/technos.jpg";
+import service_img from "../../public/images/service-home.jpg";
+import LinkButton from "@/components/buttons/LinkButton";
+import HeroBanner from "@/components/items/HeroBanner";
+
+// ||||||||||||||||||||||||||||| HomePage Component ||||||||||||||||||||||||||||||||||||
+
+interface IHomePageProps {}
+
+const HomePage: FC<IHomePageProps> = ({}) => {
+  // Return
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Layout>
+      <motion.div
+        aria-label="home page"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <HeroBanner />
+        <section id="presentation" className="presentation bg-tw_secondary">
+          <div
+            aria-label="content"
+            className="content max-w-[1600px] mx-auto py-16 px-10 flex justify-between items-center max_xl_2:flex-col max_xl_2:space-y-24"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <div
+              aria-label="image"
+              className="img relative w-[500px] h-[300px] max_xl:max-w-[400px] max_xl:h-[240px] max_xl_2:max-w-[500px] max_xl_2:h-[300px] max_md:max-w-[310px] max_md:h-[190px]"
+            >
+              <div className="filter w-full h-full border-4 border-color_link rounded-xl max_sm:hidden"></div>
+              <Image
+                src={technos_img}
+                alt="techno_img.png"
+                className="technos-img sm:absolute top-6 left-10 w-full rounded-xl"
+              />
+            </div>
+            <div
+              aria-label="text"
+              className="text max-w-[600px] flex flex-col space-y-10"
+            >
+              <div className="top flex flex-col space-y-6 max_xl_2:text-center">
+                <p>
+                  En tant que Développeur web, j’ai eu l’occasion de travailler
+                  sur divers projets me donnant une bonne connaissance sur la
+                  creation de site internet et de gestion de services web.
+                </p>
+                <p>
+                  Titulaire d’un diplome bac+2 de développeur d’application web,
+                  je maîtrise plusieurs technologies et outils à mettre au
+                  service de vos demandes.
+                </p>
+                <p>
+                  Cette liste d&apos;outils récentes (Nextjs, Reactjs, Express
+                  JS, MySQL, PostgreSQL, etc..) sont une combinaison parfaite
+                  afin de réaliser une grande majorités des sites web modernes.
+                </p>
+                <p>
+                  N’hesitez donc pas à me contacter pour soliciter mes services
+                  ou pour toutes autres informations.
+                </p>
+              </div>
+              <div className="bottom">
+                <div className="buttons mx-auto md:space-x-10 flex max_xl_2:justify-center max_md:flex-col max_md:items-center w-full max_md:space-x-0 max_md:space-y-10">
+                  <LinkButton
+                    link="/contact"
+                    text="Contactez Moi"
+                    style="w-[250px] py-4"
+                  />
+                  <a
+                    href="https://github.com/iam4ealdamba"
+                    target="_blank"
+                    className="w-[250px] py-4 rounded-lg text-tw_primary border-4 border-tw_primary font-black inline-block text-center"
+                  >
+                    Consultez mon Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="services">
+          <div
+            aria-label="content"
+            className="content max-w-[1600px] mx-auto py-16 px-10 flex justify-between items-center max_xl_2:flex-col max_xl_2:space-y-24"
+          >
+            <div
+              aria-label="image"
+              className="img relative w-[500px] h-[300px] lg:order-2 max_xl:max-w-[400px] max_xl:h-[240px] max_xl_2:order-1 max_xl_2:max-w-[500px] max_xl_2:h-[300px] max_md:max-w-[310px] max_md:h-[190px]"
+            >
+              <div className="filter w-full h-full border-4 border-color_link rounded-xl max_sm:hidden"></div>
+              <Image
+                src={service_img}
+                alt="service-img.png"
+                className="technos-img sm:absolute top-6 -left-10 w-full rounded-xl"
+              />
+            </div>
+            <div
+              aria-label="text"
+              className="text max-w-[600px] flex flex-col space-y-10 order-1"
+            >
+              <div className="top flex flex-col space-y-6 max_xl_2:text-center">
+                <p>
+                  Les services que je peut vous offrir sont assez nombreux et
+                  assureront du bon dérouler des projets que vous me confierez:
+                </p>
+                <ul className="space-y-3 max_xl_2:flex max_xl_2:flex-col max_xl_2:items-center">
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Sites Sur Mesures
+                  </li>
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Site Vitrine
+                  </li>
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Site E-commerce
+                  </li>
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Application Mobile
+                  </li>
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Design Web
+                  </li>
+                  <li className="flex gap-x-4 items-center max_xl_2:w-[300px]">
+                    <FaCircle className="text-xs" /> Maintenance Web,
+                    Référencement
+                  </li>
+                </ul>
+              </div>
+              <div className="bottom">
+                <div className="buttons mx-auto md:space-x-10 flex max_xl_2:justify-center max_md:flex-col max_md:items-center w-full max_md:space-x-0 max_md:space-y-10">
+                  <Link
+                    href="/services"
+                    className="w-[250px] py-4 bg-tw_primary rounded-lg text-tw_text_dark font-black inline-block text-center"
+                  >
+                    Consultez les services
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </motion.div>
+    </Layout>
   );
-}
+};
+export default HomePage;

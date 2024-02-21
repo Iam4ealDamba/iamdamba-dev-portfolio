@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Music Stream",
+    "description": "Music Stream est une plateforme E-Commerce de ventes de musique pour des producteurs.",
+    "client": "Projet Personnel",
+    "role": "Full-Stack",
+    "stack": "React, Node.js,  MongoDB, Paypal API",
+    "date": "17/01/2022",
+    "link": "https://react-music-stream.vercel.app/",
+    "img": "/images/music_stream.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Rimeback Studio",
+    "description": "Rimeback est une plateforme pour un studio de production de musique et enregistrement.",
+    "client": "Rimeback Studio",
+    "role": "Refonte site - Front-End",
+    "stack": "React, Wordpress, MySQL",
+    "date": "27/09/2021",
+    "link": "https://rimeback.net/records/",
+    "img": "/images/rimeback.jpg"
+  }
+]
