@@ -19,7 +19,7 @@ interface IContactFormProps {
   message: string;
 }
 
-const ContactPage: FC<IContactPageProps> = ({}) => {
+const ContactPage: FC = ({}) => {
   // Hooks
   const formRef = useRef(null);
   const [errorMsg, setErrorMsg] = useState({
