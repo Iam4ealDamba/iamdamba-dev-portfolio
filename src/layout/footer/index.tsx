@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           <div className="item">
             <a
-              href="https://github.com/IamDamba"
+              href="https://github.com/iam4ealdamba"
               target={"_blank"}
               className="text-4xl"
             >
