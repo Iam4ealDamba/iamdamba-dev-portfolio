@@ -40,10 +40,16 @@ const Header: FC<IHeaderProps> = ({}) => {
 
   // Effects
   useEffect(() => {
+    const html_el = document.documentElement;
     const body_el = document.body;
 
-    if (isMenuActive) body_el.style.overflow = "hidden";
-    else body_el.style.overflow = "auto";
+    if (isMenuActive) {
+      html_el.style.overflow = "hidden";
+      body_el.style.overflow = "hidden";
+    } else {
+      html_el.style.overflow = "auto";
+      body_el.style.overflow = "auto";
+    }
   }, [isMenuActive]);
   useEffect(() => {
     window.addEventListener("scroll", HideMenuScroll, { passive: true });
@@ -141,7 +147,7 @@ const Header: FC<IHeaderProps> = ({}) => {
         >
           <li>
             <Link
-              href={""}
+              href={"/"}
               className={`text-xl ${
                 router == "" ? "active-link" : "text-tw_accent"
               }`}
@@ -151,7 +157,7 @@ const Header: FC<IHeaderProps> = ({}) => {
           </li>
           <li>
             <Link
-              href={""}
+              href={"/services"}
               className={`text-xl ${
                 router == "services" ? "active-link" : "text-tw_accent"
               }`}
@@ -161,7 +167,7 @@ const Header: FC<IHeaderProps> = ({}) => {
           </li>
           <li>
             <Link
-              href={""}
+              href={"/portfolio"}
               className={`text-xl ${
                 router == "portfolio" ? "active-link" : "text-tw_accent"
               }`}
