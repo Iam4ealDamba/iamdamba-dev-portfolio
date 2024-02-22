@@ -1,6 +1,17 @@
 [
   {
     "id": 1,
+    "title": "Honey Glass Boutique",
+    "description": "Honey Glass est une plateforme E-Commerce de vente de lunettes de soleil.",
+    "client": "Projet Personnel",
+    "role": "Front-End",
+    "stack": "NextJS(React), TypeScript, TailwindCSS",
+    "date": "10/01/2024",
+    "link": "https://honey-glass-e-commerce.vercel.app/",
+    "img": "/images/honey-glass.jpg"
+  },
+  {
+    "id": 2,
     "title": "Music Stream",
     "description": "Music Stream est une plateforme E-Commerce de ventes de musique pour des producteurs.",
     "client": "Projet Personnel",
@@ -11,7 +22,7 @@
     "img": "/images/music_stream.jpg"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Rimeback Studio",
     "description": "Rimeback est une plateforme pour un studio de production de musique et enregistrement.",
     "client": "Rimeback Studio",
