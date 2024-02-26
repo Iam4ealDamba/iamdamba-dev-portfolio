@@ -12,6 +12,17 @@
   },
   {
     "id": 2,
+    "title": "DesignR Digital Agency",
+    "description": "DesignR Digital Agency est une plateforme qui à pour but de creer des design graphique web unique et personnalisé.",
+    "client": "Projet Personnel",
+    "role": "Front-End",
+    "stack": "NextJS(React), React-Fiber(Three JS), TypeScript, TailwindCSS",
+    "date": "02/02/2024",
+    "link": "https://react-b2b-01-designr.vercel.app/",
+    "img": "/images/designr-agency.jpg"
+  },
+  {
+    "id": 3,
     "title": "Music Stream",
     "description": "Music Stream est une plateforme E-Commerce de ventes de musique pour des producteurs.",
     "client": "Projet Personnel",
@@ -22,7 +33,7 @@
     "img": "/images/music_stream.jpg"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Rimeback Studio",
     "description": "Rimeback est une plateforme pour un studio de production de musique et enregistrement.",
     "client": "Rimeback Studio",
