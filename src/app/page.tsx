@@ -51,18 +51,13 @@ const HomePage: FC<IHomePageProps> = ({}) => {
             >
               <div className="top flex flex-col space-y-6 max_xl_2:text-center">
                 <p>
-                  En tant que Développeur web, j’ai eu l’occasion de travailler
+                  En tant que Développeur Full Stack, j’ai eu l’occasion de travailler
                   sur divers projets me donnant une bonne connaissance sur la
-                  creation de site internet et de gestion de services web.
-                </p>
-                <p>
-                  Titulaire d’un diplome bac+2 de développeur d’application web,
-                  je maîtrise plusieurs technologies et outils à mettre au
-                  service de vos demandes.
-                </p>
+                  création de sites internet et de gestion de services web.
+                </p> 
                 <p>
                   Cette liste d&apos;outils récentes (Nextjs, Reactjs, Express
-                  JS, MySQL, PostgreSQL, etc..) sont une combinaison parfaite
+                  JS, MySQL, PostgreSQL, Spring Boot, etc..) est une combinaison parfaite d&apos;outils
                   afin de réaliser une grande majorités des sites web modernes.
                 </p>
                 <p>
