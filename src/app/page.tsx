@@ -57,7 +57,7 @@ const HomePage: FC<IHomePageProps> = ({}) => {
                 </p> 
                 <p>
                   Cette liste d&apos;outils récentes (Nextjs, Reactjs, Express
-                  JS, MySQL, PostgreSQL, Spring Boot, etc..) est une combinaison parfaite d'outils
+                  JS, MySQL, PostgreSQL, Spring Boot, etc..) est une combinaison parfaite d&apos;outils
                   afin de réaliser une grande majorités des sites web modernes.
                 </p>
                 <p>
