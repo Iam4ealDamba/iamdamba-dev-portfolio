@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="list flex space-x-8 items-center ">
           <div className="item">
             <a
-              href="https://www.linkedin.com/in/jordi-ngwebo-damba-0228b0148"
+              href="https://www.linkedin.com/in/jordi-ngwebo-damba"
               target={"_blank"}
               className="text-4xl"
             >
