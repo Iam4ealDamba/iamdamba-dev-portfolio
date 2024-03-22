@@ -76,7 +76,7 @@ const Footer = () => {
       </div>
       <div className="bottom flex flex-col justify-center items-center py-10 text-center px-8">
         <p className="uppercase text-sm font-bold">
-          Copyright © 2022 IAMDAMBA. All Rights Reserved
+          Copyright © {new Date().getFullYear()} IAMDAMBA DEV. Tout droits réservés
         </p>
         <div
           className={`button fixed bottom-[4vh] right-20  px-3 py-3 cursor-pointer transition-all duration-200 text-tw_text_dark ${

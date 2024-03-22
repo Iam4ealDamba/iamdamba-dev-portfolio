@@ -149,7 +149,7 @@ const ContactPage: FC = ({}) => {
             <div className="top text-tw_text_dark px-10  space-y-8">
               <div className="input flex flex-col space-y-4">
                 <label htmlFor="name" className="text-tw_text_light text-lg">
-                  Enter Your Name *
+                  Entrer votre nom complet *
                 </label>
                 <Controller
                   control={control}
@@ -171,7 +171,7 @@ const ContactPage: FC = ({}) => {
               </div>
               <div className="input flex flex-col space-y-4">
                 <label htmlFor="email" className="text-tw_text_light text-lg">
-                  Enter Your Email *
+                  Entrer votre adresse email *
                 </label>
                 <Controller
                   control={control}
@@ -193,7 +193,7 @@ const ContactPage: FC = ({}) => {
               </div>
               <div className="input flex flex-col space-y-4">
                 <label htmlFor="message" className="text-tw_text_light text-lg">
-                  Enter Your Message *
+                  Entrer votre message *
                 </label>
                 <Controller
                   control={control}
@@ -227,7 +227,7 @@ const ContactPage: FC = ({}) => {
                 className="px-4 py-2 bg-tw_primary text-tw_text_dark rounded-lg"
                 onClick={handleSubmit(handleSubmitEmail)}
               >
-                Send Message
+                Envoyer le message
               </button>
             </div>
           </form>
